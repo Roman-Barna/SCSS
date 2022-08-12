@@ -5,6 +5,28 @@ $Montserrat: 'Montserrat', sans-serif;
 $Raleway: 'Raleway', sans-serif;
 $gray: #373A39;
 $orange: #FCBB08;
+$backgroundGray : #F6F8FA;
+
+%text__style__p {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $gray;
+    margin-bottom: 20px;
+}
+
+%after__img {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,6 +36,25 @@ $orange: #FCBB08;
 .container {
     margin: 0 auto;
     width: 1200px;
+}
+.title {
+    font-family: $Montserrat;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 75px;
+    letter-spacing: -1.6500000953674316px;
+    text-align: left;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 25%;
+        height: 2px;
+        background-color: $orange;
+    }
 }
 
 .header {
@@ -126,6 +167,152 @@ $orange: #FCBB08;
                 }
             }
 
+        }
+    }
+}
+
+.about {
+    background-color: #F6F8FA;
+}
+
+.about__inner {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+   
+
+    .about__text {
+        
+        width: 60%;
+        padding: 20px;
+
+        p {
+            @extend %text__style__p
+        }
+    }
+}
+
+.expertise {
+    padding: 50px 0;
+
+    .expertise__content {
+        margin-top: 50px;
+        display: flex;
+
+        .expertise__content-items {
+            padding: 25px 20px 0 0;
+            flex-basis: 40%;
+
+            .expertise__content-item {
+                padding-top: 5px;
+                border-top: 5px solid #ddd;
+                position: relative;
+                margin-bottom: 15px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -5px;
+                    left: 0;
+                    width: 90%;
+                    border-top: 5px solid #000;
+                }
+            }
+        }
+
+        .expertise__content-text {
+            flex-basis: 60%;
+            padding: 15px;
+
+            p {
+                @extend %text__style__p
+            }
+        }
+    }
+
+    .expertise__items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        .expertise__item:nth-child(1) {
+            &::after {
+                @extend %after__img;
+                background-image: url(../icons/Shape.png);
+            }
+        }
+        .expertise__item:nth-child(2) {
+            &::after {
+                @extend %after__img;
+                background-image: url(../icons/monitor.png);
+            }
+        }
+        .expertise__item:nth-child(3) {
+            &::after {
+                @extend %after__img;
+                background-image: url(../icons/speaker\ copy.png);
+            }
+        }
+
+        .expertise__item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin: 20px;
+
+            .expertise__item-title {
+                    width: 80%;
+                    font-family: $Raleway;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    letter-spacing: 4.289999961853027px;
+                    text-align: left;
+                    margin-bottom: 10px;
+                }
+
+            .expertise__item-text {
+                width: 80%;
+                @extend %text__style__p
+            }
+
+            
+            
+        }
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.fullScreen {
+    height: 100vh;
+}
+
+.features {
+    .features__img {
+        width: 50%;
+        height: 100%;
+        background-image: url(../images/img.png);
+        background-size: cover;
+    }
+
+    .features__inner {
+        width: 50%;
+        padding: 60px;
+        background-color: $backgroundGray;
+
+        .features__title {
+            width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .features__text {
+            p {
+                @extend %text__style__p
+            }
         }
     }
 }
