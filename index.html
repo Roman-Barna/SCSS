@@ -170,13 +170,13 @@
         <div class="container">
             <div class="portfolio__head">
                 <h1 class="title portfolio__title">Portfolio</h1>
-                    <div class="portfolio__buttons">
-                        <button class="portfolio__btn">ALL</button>
-                        <button class="portfolio__btn">BRANDING</button>
-                        <button class="portfolio__btn">BRANDING</button>
-                        <button class="portfolio__btn">PHOTOGRAPHY</button>
-                        <button class="portfolio__btn">ILLUSTRATION</button>
-                    </div>
+                    <ul class="portfolio__buttons">
+                        <li class="portfolio__btn portfolio__btn--active">ALL</li>
+                        <li class="portfolio__btn">BRANDING</li>
+                        <li class="portfolio__btn">BRANDING</li>
+                        <li class="portfolio__btn">PHOTOGRAPHY</li>
+                        <li class="portfolio__btn">ILLUSTRATION</li>
+                    </ul>
             </div>
         </div>
         <div class="portfolio__items">
@@ -217,8 +217,9 @@
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
 
-            <button class="portfolio__btn-all">VIEW MORE PROJECTS</button>
+            
         </div>
+        <button class="portfolio__btn-all">VIEW MORE PROJECTS</button>
     </section>
 
     <section class="video">
@@ -260,20 +261,20 @@
 
     <section class="team">
         <div class="container">
-            <div class="title"></div>
+            <div class="title">Our Team</div>
             <div class="team__items">
                 <div class="team__item">
-                    <img class="team__item-img" src="" alt="">
+                    <img class="team__item-img" src="./images/team_img_1.png" alt="">
                     <div class="team__item-name">BERNARD SPARKS</div>
                     <div class="team__item-position">CEO</div>
                 </div>
                 <div class="team__item">
-                    <img class="team__item-img" src="" alt="">
+                    <img class="team__item-img" src="./images/team_img_2.png" alt="">
                     <div class="team__item-name">MINERVA BENSON</div>
                     <div class="team__item-position">Co-Founder</div>
                 </div>
                 <div class="team__item">
-                    <img class="team__item-img" src="" alt="">
+                    <img class="team__item-img" src="./images/team_img_3.png" alt="">
                     <div class="team__item-name">JARED OLSON</div>
                     <div class="team__item-position">Sales</div>
                 </div>
@@ -384,7 +385,7 @@
             <form class="contact__form" action="">
                 <input class="contact__form-input" type="text" placeholder="YOUR NAME">
                 <input class="contact__form-input" type="email" placeholder="VALID EMAIL">
-                <textarea class="contact__form-input" placeholder="YOUR MESSAGE"></textarea>
+                <textarea class="contact__form-input" placeholder="YOUR MESSAGE" rows="7"></textarea>
                 <button class="contact__btn">SEND MESSAGE</button>
             </form>
             </div>
@@ -393,11 +394,12 @@
     </section>
 
     <footer class="footer">
+        <div class="container">
         <div class="footer__contant">
-            <div class="container">
+            
                 <div class="logo logo--line">
                     <a class="logo-link" href="#">
-                        <img class="logo__img" src="" alt="">
+                        <img class="logo__img" src="./icons/Logo.png" alt="">
                     </a>
                 </div>
                 <div class="footer__social">
@@ -411,8 +413,9 @@
                 <div class="footer__adress">Mese Selimovica 52, Banja Luka - BiH</div>
                 <a class="footer__phone" href="tel:0038765252222">(00387) 65 252 222</a>
                 <a class="footer__email" href="mailTo:info@mail.com">info@mail.com</a>
-            </div>
+            
         </div>
+    </div>
         <div class="footer__copy">@2015 Oxygen Theme</div>
     </footer>
 

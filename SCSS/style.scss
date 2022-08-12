@@ -7,6 +7,16 @@ $gray: #373A39;
 $orange: #FCBB08;
 $backgroundGray : #F6F8FA;
 
+%footer__style__text {
+    font-family: Open Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: 0px;
+text-align: center;
+color: #A8A8A8;
+}
+
 %text__style__p {
     font-family: Open Sans;
     font-size: 14px;
@@ -37,6 +47,7 @@ $backgroundGray : #F6F8FA;
     margin: 0 auto;
     width: 1200px;
 }
+
 .title {
     font-family: $Montserrat;
     font-size: 48px;
@@ -51,7 +62,7 @@ $backgroundGray : #F6F8FA;
         position: absolute;
         top: 80px;
         left: 0;
-        width: 25%;
+        width: 60px;
         height: 2px;
         background-color: $orange;
     }
@@ -130,7 +141,7 @@ $backgroundGray : #F6F8FA;
                 letter-spacing: 0px;
                 text-align: center;
                 color: #fff;
-                
+
             }
 
             .header__description {
@@ -179,10 +190,10 @@ $backgroundGray : #F6F8FA;
     display: flex;
     justify-content: space-around;
     padding: 50px 0;
-   
+
 
     .about__text {
-        
+
         width: 60%;
         padding: 20px;
 
@@ -208,6 +219,7 @@ $backgroundGray : #F6F8FA;
                 border-top: 5px solid #ddd;
                 position: relative;
                 margin-bottom: 15px;
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -241,12 +253,14 @@ $backgroundGray : #F6F8FA;
                 background-image: url(../icons/Shape.png);
             }
         }
+
         .expertise__item:nth-child(2) {
             &::after {
                 @extend %after__img;
                 background-image: url(../icons/monitor.png);
             }
         }
+
         .expertise__item:nth-child(3) {
             &::after {
                 @extend %after__img;
@@ -262,23 +276,23 @@ $backgroundGray : #F6F8FA;
             margin: 20px;
 
             .expertise__item-title {
-                    width: 80%;
-                    font-family: $Raleway;
-                    font-size: 14px;
-                    font-weight: 700;
-                    line-height: 20px;
-                    letter-spacing: 4.289999961853027px;
-                    text-align: left;
-                    margin-bottom: 10px;
-                }
+                width: 80%;
+                font-family: $Raleway;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: 4.289999961853027px;
+                text-align: left;
+                margin-bottom: 10px;
+            }
 
             .expertise__item-text {
                 width: 80%;
                 @extend %text__style__p
             }
 
-            
-            
+
+
         }
     }
 }
@@ -317,3 +331,327 @@ $backgroundGray : #F6F8FA;
     }
 }
 
+.portfolio {
+    margin: 50px 0;
+
+
+    .portfolio__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        .portfolio__buttons {
+            display: flex;
+
+            .portfolio__btn {
+                margin: 0 10px;
+                list-style-type: none;
+                cursor: pointer;
+            }
+
+            .portfolio__btn--active {
+                border-bottom: 2.5px solid $orange;
+                padding-bottom: 6px;
+            }
+        }
+    }
+
+    .portfolio__items {
+        display: flex;
+        flex-wrap: wrap;
+
+        .portfolio__item-img {
+            flex-basis: 23.4%;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .portfolio__btn-all {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        background-color: $backgroundGray;
+        cursor: pointer;
+    }
+}
+
+.portfolio__item-height1 {
+    height: 288px;
+}
+
+.portfolio__item-height2 {
+    height: 367px;
+}
+
+.portfolio__item-height3 {
+    height: 523px;
+}
+
+.portfolio__item-height4 {
+    height: 572px;
+}
+
+.video {
+    width: 100%;
+
+    .video__quotes {
+        text-align: center;
+        @extend %text__style__p
+    }
+
+    .video__quotes-author {
+        text-align: center;
+        @extend %text__style__p
+    }
+
+    .video__content {
+        width: 100%;
+        height: 35vh;
+        background-color: #000;
+    }
+}
+
+.statistics {
+    padding: 50px 0;
+
+    .statistics__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.statistics__num {
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+    text-align: center;
+}
+
+.statistics__text {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #00B2A0;
+    text-align: center;
+}
+
+.team__items {
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+
+    .team__item {
+        width: 33%;
+        text-align: center;
+
+
+        .team__item-img {
+            width: 100%;
+            height: 520px;
+        }
+
+        .team__item-name {
+            font-family: $Montserrat;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 17px;
+            letter-spacing: 0px;
+            margin: 12px 0;
+        }
+
+        .team__item-position {
+            font-family: Open Sans;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 16px;
+            letter-spacing: 0px;
+            color: #C2C2C2;
+        }
+
+        &:nth-child(2) {
+            margin: 0 25px;
+        }
+    }
+}
+
+.pricing {
+    padding: 60px 0;
+    background-color: $backgroundGray;
+
+    .pricing__items {
+        display: flex;
+        margin-top: 50px;
+
+        .pricing__item {
+            flex-basis: 33%;
+            text-align: center;
+            background-color: #fff;
+            padding: 15px;
+            padding-bottom: 30px;
+
+            .pricing__item-name {
+                text-align: left;
+                font-family: Open Sans;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 22px;
+                letter-spacing: 0px;
+                text-align: left;
+            }
+
+            .pricing__item-race {
+                text-align: center;
+                font-family: Open Sans;
+                font-size: 80px;
+                font-weight: 300;
+                line-height: 109px;
+                letter-spacing: 0px;
+                text-align: center;
+                position: relative;
+
+                span {
+                    font-family: Open Sans;
+                    font-size: 20px;
+                    font-weight: 300;
+                    line-height: 27px;
+                    letter-spacing: 0px;
+                    text-align: center;
+                    color: #242121;
+                }
+
+                &::after {
+                    content: '$';
+                    position: absolute;
+                    top: 15px;
+                    left: 25%;
+                    font-family: Open Sans;
+                    font-size: 40px;
+                    font-weight: 300;
+                    line-height: 54px;
+                    letter-spacing: 0px;
+                    text-align: center;
+
+                }
+            }
+
+            .pricing__list-item {
+                font-family: Open Sans;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 22px;
+                letter-spacing: 0px;
+                list-style-type: none;
+                margin: 25px 0;
+                color: #242121;
+            }
+
+            .pricing__btn {
+                font-family: $Montserrat;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 17px;
+                letter-spacing: 1.2000000476837158px;
+                text-align: center;
+                border: none;
+                background-color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.pricing__item:nth-child(2) {
+    margin: 0 20px;
+}
+
+.contact__content {
+    margin: 60px 0;
+    width: 50%;
+
+    .contact__form {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        padding-right: 40px;
+
+        .contact__form-input {
+            margin: 15px 0;  
+            border: none; 
+            border-bottom: 2px solid $gray;
+            padding-bottom: 8px;
+        }
+
+        .contact__btn {
+            width: 200px;
+            padding: 8px 20px; 
+            border: none;
+            background-color: #242121;
+            color: #fff;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    }
+}
+
+.footer {
+    background-color: $gray;
+
+    .footer__copy {
+        background-color: #2A2C2B;
+        @extend %footer__style__text;
+        padding: 15px;
+    }
+}
+
+.footer__contant {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .logo--line {
+        padding-bottom: 11px;
+        border-bottom: 2.5px solid $orange;
+        padding: 0 25px;
+    }
+
+    .footer__social {
+        margin: 40px;
+
+        .footer__social-link {
+            margin: 0 15px;
+            color: #fff;
+            font-family: $Montserrat;
+font-size: 12px;
+font-weight: 300;
+line-height: 15px;
+letter-spacing: 4px;
+text-align: left;
+text-decoration: none;
+        }
+    }
+
+    .footer__adress, .footer__phone, .footer__email{
+        @extend %footer__style__text;
+        text-decoration: none;
+    }
+    
+    .footer__phone:hover, .footer__email:hover {
+        color: #fff;
+    }
+    
+}
