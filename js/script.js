@@ -10,6 +10,7 @@ let windowOpasity = document.querySelector('.window__opasity')
 let pricingBtn = document.querySelectorAll('.pricing__btn')
 let modalBtnClose = document.querySelector('.modal__btn-close')
 let modalBtnSend = document.querySelector('.modal__btn-send')
+let portfolioImg =  $('.portfolio__item-img')
 // navbar
 
 menuLink.forEach(element => {
@@ -42,9 +43,11 @@ window.addEventListener('scroll', () => {
 
     if (windowScroll == 0) {
         $('.header-top').hide().slideDown(500)
+        $('.header-top').css('background-color', 'transparent')
         decorAnimate()
     } else {
         clearInterval(decorInterval)
+        $('.header-top').css('background-color', '#fff')
     }
 
 for (const item of section) {
@@ -74,39 +77,6 @@ for (const item of section) {
 // decor
 
 decorAnimate()
-
-// download 
-
-let expertiseContentItem = document.querySelectorAll('.expertise__content-item')
-
-expertiseContentItem.forEach(element => {
-    let countDownload = 0
-    let downloadInterval
-    downloadInterval = setInterval(() => {
-        element.childNodes[1].innerHTML = `${countDownload}%`
-            if (countDownload < +element.getAttribute('data-width')) {
-                element.style.setProperty('--widthAfter', `${countDownload++}%`)
-            } else {
-                clearInterval(downloadInterval)
-            }
-        }, 30);
-})
-
-let static = document.querySelectorAll('.statistics__num')
-
-static.forEach(elem => {
-    let countDownloadNumbers = 0
-    let downloadIntervalNumbers
-    downloadIntervalNumbers = setInterval(() => {
-    if (countDownloadNumbers <= +elem.getAttribute('data-count')) {
-        elem.innerHTML = countDownloadNumbers++
-    }
-}, 30);
-})
-
-//
-
-
 
 let video = document.querySelector('.video__content')
 let playVideo = document.querySelector('.playVideo')
@@ -156,10 +126,66 @@ modalBtnSend.addEventListener('click', (e) => {
 ScrollReveal().reveal('.scrollShow', {
     interval: 100
 });
+
+ScrollReveal().reveal('.expertise__content-item', {
+    afterReveal: function () {
+// download 
+
+let expertiseContentItem = document.querySelectorAll('.expertise__content-item')
+
+expertiseContentItem.forEach(element => {
+    
+    let countDownload = 0
+    let downloadInterval
+    downloadInterval = setInterval(() => {
+        if (countDownload > 25) {
+            element.childNodes[1].innerHTML = `${countDownload}%`
+        }
+            if (countDownload < +element.getAttribute('data-width')) {
+                element.style.setProperty('--widthAfter', `${countDownload++}%`)
+            } else {
+                clearInterval(downloadInterval)
+            }
+        }, 30);
+})
+    }
+});
+
 ScrollReveal({ distance: '160px' });
+
 ScrollReveal().reveal('.title', {
     origin: 'left',
     delay: 200
+});
+
+ScrollReveal({ distance: '160px' });
+
+ScrollReveal().reveal('.portfolio__btn', {
+    origin: 'right',
+    interval:150,
+    delay: 200
+});
+ScrollReveal({ distance: '260px' });
+
+ScrollReveal().reveal('.portfolio__item-img', {
+    origin: 'bottom',
+    interval:100,
+    delay: 200
+});
+ScrollReveal().reveal('.statistics__item', {
+    afterReveal: function () {
+        let static = document.querySelectorAll('.statistics__num')
+
+        static.forEach(elem => {
+            let countDownloadNumbers = 0
+            let downloadIntervalNumbers
+            downloadIntervalNumbers = setInterval(() => {
+            if (countDownloadNumbers <= +elem.getAttribute('data-count')) {
+                elem.innerHTML = countDownloadNumbers++
+            }
+        }, 30);
+        })
+    }
 });
 
 
@@ -174,23 +200,31 @@ ScrollReveal().reveal('.title', {
 
 
         if ($(this).attr('data-filter') == '*') {
-            $('.portfolio__item-img').fadeIn(500)
+            portfolioImg.fadeIn(500)
         } else if ($(this).attr('data-filter') == 'BRANDING') {
-            $('.portfolio__item-img').fadeIn(2)
-            $('.portfolio__item-img').filter(function () {
+            portfolioImg.fadeIn(2)
+            portfolioImg.filter(function () {
                 return $(this).attr('data-filter') != "BRANDING"
             }).fadeOut(500)
 
         } else if ($(this).attr('data-filter') == 'PHOTOGRAPHY') {
-            $('.portfolio__item-img').fadeIn(1)
-            $('.portfolio__item-img').filter(function () {
+            portfolioImg.fadeIn(1)
+            portfolioImg.filter(function () {
                 return $(this).attr('data-filter') != "PHOTOGRAPHY"
             }).fadeOut(500)
         } else if ($(this).attr('data-filter') == 'ILLUSTRATION') {
-            $('.portfolio__item-img').fadeIn(1)
-            $('.portfolio__item-img').filter(function () {
+            portfolioImg.fadeIn(1)
+            portfolioImg.filter(function () {
                 return $(this).attr('data-filter') != "ILLUSTRATION"
             }).fadeOut(500)
         }
     })
+
+    // map
+
+    let coords = { lat: 49.8368512, lng: 24.018944 }
+    map = new google.maps.Map(document.getElementById("contact__map"), {
+        center: coords,
+        zoom: 16,
+    });
 })
