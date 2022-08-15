@@ -142,11 +142,12 @@
   transform: translate(-50%, 0);
   border-radius: 15px;
   cursor: pointer;
+  --topAfter: 15%;
 }
 .header .header-content .header__content-inner .header__content-decor::after {
   content: '';
   position: absolute;
-  top: 15%;
+  top: var(--topAfter);
   left: 50%;
   transform: translate(-50%, -15%);
   width: 7px;
@@ -185,13 +186,20 @@
   border-top: 5px solid #ddd;
   position: relative;
   margin-bottom: 15px;
+  --widthAfter: 0%;
+}
+.expertise .expertise__content .expertise__content-items .expertise__content-item span {
+  position: absolute;
+  top: 0;
+  left: var(--widthAfter);
 }
 .expertise .expertise__content .expertise__content-items .expertise__content-item::after {
-  content: "";
+  content: '';
+  text-align: right;
   position: absolute;
   top: -5px;
   left: 0;
-  width: 90%;
+  width: var(--widthAfter);
   border-top: 5px solid #000;
 }
 .expertise .expertise__content .expertise__content-text {
@@ -326,8 +334,21 @@
 .video .video__quotes-author {
   text-align: center;
 }
+.video .video__conteiner {
+  position: relative;
+}
+.video .video__conteiner .playVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #F6F8FA;
+  cursor: pointer;
+}
 .video .video__content {
-  width: 100%;
+  min-width: 100%;
+  object-fit: cover;
   height: 35vh;
   background-color: #000;
 }

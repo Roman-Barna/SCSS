@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -90,9 +91,9 @@
             <div class="title">Our Expertise</div>
             <div class="expertise__content">
                 <div class="expertise__content-items">
-                    <div class="expertise__content-item">BRANDING</div>
-                    <div class="expertise__content-item">DESIGN</div>
-                    <div class="expertise__content-item">DEVELOPMENT</div>
+                    <div class="expertise__content-item" data-width="90">BRANDING <span></span></div>
+                    <div class="expertise__content-item" data-width="65">DESIGN <span></span></div>
+                    <div class="expertise__content-item" data-width="78">DEVELOPMENT <span></span></div>
                 </div>
                 <div class="expertise__content-text">
                     <p>
@@ -229,26 +230,32 @@
         <div class="video__quotes-author">
             Gilberd Hammont
         </div>
-        <video class="video__content" src=""></video>
+        
+        <div class="video__conteiner">
+            <video class="video__content">
+                <source src="./video/pexels-sarowar-hussain-5946371.mp4" type="video/mp4">
+            </video>
+            <div class="playVideo bi bi-google-play"></div>
+        </div>
     </section>
 
     <section class="statistics">
         <div class="container">
             <div class="statistics__inner">
                 <div class="statistics__item">
-                    <div class="statistics__num">305</div>
+                    <div class="statistics__num" data-count="305">0</div>
                     <div class="statistics__text">Web Designs</div>
                 </div>
                 <div class="statistics__item">
-                    <div class="statistics__num">220</div>
+                    <div class="statistics__num" data-count="220">0</div>
                     <div class="statistics__text">Logo Designs</div>
                 </div>
                 <div class="statistics__item">
-                    <div class="statistics__num">52</div>
+                    <div class="statistics__num" data-count="52">0</div>
                     <div class="statistics__text">Print Designs</div>
                 </div>
                 <div class="statistics__item">
-                    <div class="statistics__num">88</div>
+                    <div class="statistics__num" data-count="88">0</div>
                     <div class="statistics__text">Mobile Apps</div>
                 </div>
             </div>
