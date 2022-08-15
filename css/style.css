@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Subrayada&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Subrayada&family=Raleway&display=swap");
+.portfolio .portfolio__items .portfolio__item-img .portfolio__item-title, .portfolio .portfolio__items .portfolio__item-img .portfolio__item-destr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .footer .footer__copy, .footer__contant .footer__adress, .footer__contant .footer__phone, .footer__contant .footer__email {
   font-family: Open Sans;
   font-size: 14px;
@@ -289,17 +296,42 @@
 }
 .portfolio .portfolio__items {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .portfolio .portfolio__items .portfolio__item-img {
   flex-basis: 23.4%;
-  height: 100px;
-  background-color: red;
+  height: 220px;
+  background-color: silver;
+  border: 4px solid rgba(0, 0, 0, 0.5);
   margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+}
+.portfolio .portfolio__items .portfolio__item-img .portfolio__item-title {
+  opacity: 0;
+  color: #fff;
+}
+.portfolio .portfolio__items .portfolio__item-img .portfolio__item-destr {
+  opacity: 0;
+  color: #fff;
+  top: 70%;
+}
+.portfolio .portfolio__items .portfolio__item-img:hover .portfolio__item-title {
+  opacity: 1;
+  transition: 0.7s ease;
+}
+.portfolio .portfolio__items .portfolio__item-img:hover .portfolio__item-destr {
+  opacity: 1;
+  transition: 0.7s ease;
+}
+.portfolio .portfolio__items .portfolio__item-img:hover .portfolio__item-curtain {
+  height: 100%;
+  transition: 0.8s ease;
+}
+.portfolio .portfolio__items .portfolio__item-img .portfolio__item-curtain {
+  width: 100%;
+  height: 0%;
+  background-color: #6c6c6c;
 }
 .portfolio .portfolio__btn-all {
   width: 100%;
@@ -496,6 +528,17 @@
   margin: 0 20px;
 }
 
+.contact__form-input {
+  margin: 15px 0;
+  border: none;
+  border-bottom: 2px solid #373A39;
+  padding-bottom: 8px;
+  resize: none;
+}
+.contact__form-input:focus {
+  outline: none;
+}
+
 .contact__content {
   margin: 60px 0;
   width: 50%;
@@ -505,13 +548,6 @@
   display: flex;
   flex-direction: column;
   padding-right: 40px;
-}
-.contact__content .contact__form .contact__form-input {
-  margin: 15px 0;
-  border: none;
-  border-bottom: 2px solid #373A39;
-  padding-bottom: 8px;
-  resize: none;
 }
 .contact__content .contact__form .contact__btn {
   width: 200px;
@@ -562,6 +598,81 @@
 }
 .footer__contant .footer__phone:hover, .footer__contant .footer__email:hover {
   color: #fff;
+}
+
+.modal-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  background-color: #fff;
+  display: none;
+  box-shadow: 1px 1px 4px 4px #ddd;
+  z-index: 100000;
+}
+.modal-window .modal-window__title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 75px;
+  letter-spacing: -1.6500000953674316px;
+}
+.modal-window .modal-window__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal-window .modal-window__form .modal__content {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.modal-window .modal-window__form .modal__content:nth-child(1), .modal-window .modal-window__form .modal__content:nth-child(2) {
+  flex-basis: 50%;
+}
+.modal-window .modal__battons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.modal-window .modal__battons .modal__btn-send {
+  background-color: #24d23e;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal-window .modal__battons .modal__btn-close {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.window__opasity {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  display: none;
+}
+
+.alertify-notifier {
+  z-index: 100001;
+}
+
+.alertify-notifier .ajs-message.ajs-success {
+  background-color: #000;
+}
+
+section {
+  padding-top: 55px;
 }
 
 /*# sourceMappingURL=style.css.map */

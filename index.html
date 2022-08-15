@@ -6,11 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./lib/alertyfly/alertify.min.css">
+    <link rel="stylesheet" href="./lib/alertyfly/themes/default.min.css">
+    <link rel="stylesheet" href="./lib/alertyfly/themes/semantic.min.css">
+    <link rel="stylesheet" href="./lib/alertyfly/themes/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+
+    <div class="modal-window">
+        <h2 class=" modal-window__title">Quick order</h2>
+        <form class="modal-window__form">
+            <div class="modal__content">
+                <label for="">Name</label>
+                <input type="text" class="contact__form-input">
+            </div>
+            <div class="modal__content">
+                <label for="">Phone</label>
+                <input type="text" class="contact__form-input">
+            </div>
+            
+            <div class="modal__content">
+                <label for="">E-mail</label>
+                <input type="text" class="contact__form-input">
+            </div>
+            
+            <div class="modal__content">
+                <label for="">Comments</label>
+                <textarea type="text" class="contact__form-input"></textarea>
+            </div>
+            
+        </form>
+        <div class="modal__battons">
+            <div class="modal__btn-send">Send</div>
+            <div class="modal__btn-close">Close</div>
+        </div>
+    </div>
+
+    <div class="window__opasity"></div>
+
+
+
 
     <header id="header" class="header">
         <div class="header-top">
@@ -49,10 +87,10 @@
         <div class="header-content">
             <div class="container">
                 <div class="header__content-inner">
-                    <h1 class="header__title">
+                    <h1 class="header__title scrollShow">
                         OXYGEN
                     </h1>
-                    <p class="header__description">
+                    <p class="header__description scrollShow">
                         STARTER UI KIT
                     </p>
                     <div class="header__content-decor"></div>
@@ -64,18 +102,18 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about__inner">
-                <div class="title">
+                <div class="title ">
                     About Us
                 </div>
                 <div class="about__text">
-                    <p>
+                    <p class="scrollShow">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium commodi totam culpa,
                         dolorum asperiores iusto quidem, nesciunt hic eaque blanditiis enim, id maiores nam nobis
                         dignissimos aliquam ad minus nisi. In, fuga blanditiis non cum cupiditate dolore, accusantium
                         odio doloremque quibusdam dignissimos nemo sed nisi, similique, mollitia et! Autem laborum sint
                         tenetur, earum facere veniam?
                     </p>
-                    <p>
+                    <p class="scrollShow">
                         Sunt fugiat veniam consectetur soluta quia ex tempora quaerat, perferendis! Itaque a praesentium
                         saepe ex distinctio aliquid quis laborum sit, porro dolor odio, iste eos laboriosam dolorum
                         maiores harum reiciendis vitae doloribus illum voluptatibus nobis maxime assumenda ipsam tempora
@@ -91,24 +129,24 @@
             <div class="title">Our Expertise</div>
             <div class="expertise__content">
                 <div class="expertise__content-items">
-                    <div class="expertise__content-item" data-width="90">BRANDING <span></span></div>
-                    <div class="expertise__content-item" data-width="65">DESIGN <span></span></div>
-                    <div class="expertise__content-item" data-width="78">DEVELOPMENT <span></span></div>
+                    <div class="expertise__content-item scrollShow" data-width="90">BRANDING <span></span></div>
+                    <div class="expertise__content-item scrollShow" data-width="65">DESIGN <span></span></div>
+                    <div class="expertise__content-item scrollShow" data-width="78">DEVELOPMENT <span></span></div>
                 </div>
                 <div class="expertise__content-text">
-                    <p>
+                    <p class="scrollShow">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium commodi totam culpa,
                         dolorum asperiores iusto quidem, nesciunt hic eaque blanditiis enim, id maiores nam nobis
                         dignissimos aliquam ad minus nisi.
                     </p>
-                    <p>
+                    <p class="scrollShow">
                         Autem laborum sint tenetur, earum facere veniam? Sunt fugiat veniam consectetur soluta quia ex
                         tempora quaerat, perferendis! Itaque a praesentium saepe ex distinctio aliquid quis
                     </p>
                 </div>
             </div>
             <div class="expertise__items">
-                <div class="expertise__item">
+                <div class="expertise__item scrollShow">
                     <div class="expertise__item-title">
                         GRAPHIC DESIGN
                     </div>
@@ -117,7 +155,7 @@
                         bibendum auctor, nisi elit consequat ipsum
                     </div>
                 </div>
-                <div class="expertise__item">
+                <div class="expertise__item scrollShow">
                     <div class="expertise__item-title">
                         WEB DEVELOPMENT
                     </div>
@@ -126,7 +164,7 @@
                         bibendum auctor, nisi elit consequat ipsum
                     </div>
                 </div>
-                <div class="expertise__item">
+                <div class="expertise__item scrollShow">
                     <div class="expertise__item-title">
                         MARKETING
                     </div>
@@ -142,19 +180,19 @@
     <section class="features">
         
         <div class="container flex fullScreen">
-            <div class="features__img"></div>
+            <div class="features__img scrollShow"></div>
             <div class="features__inner">
                 <h1 class="title features__title">
                     Let’s make magic.
                 </h1>
                 <div class="features__text">
-                    <p>
+                    <p class="scrollShow">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam odio itaque. Molestiae
                         aut dicta accusantium quod, modi ad alias enim dolor delectus iusto! Inventore tempora labore
                         nobis doloribus optio nulla sit corrupti nostrum, tempore debitis pariatur minus maiores velit,
                         autem ex eum distinctio error fugit. Itaque voluptatum quam veritatis fuga impedit nulla dolor.
                     </p>
-                    <p>
+                    <p class="scrollShow">
                         Nam dignissimos, ratione odit doloribus cum porro, aut. Ipsum nisi odio voluptatum, et,
                         reprehenderit accusamus, est provident debitis dicta ullam esse assumenda, odit? Alias
                         architecto enim pariatur libero ipsam mollitia maiores minus quibusdam numquam perspiciatis
@@ -172,48 +210,56 @@
             <div class="portfolio__head">
                 <h1 class="title portfolio__title">Portfolio</h1>
                     <ul class="portfolio__buttons">
-                        <li class="portfolio__btn portfolio__btn--active">ALL</li>
-                        <li class="portfolio__btn">BRANDING</li>
-                        <li class="portfolio__btn">BRANDING</li>
-                        <li class="portfolio__btn">PHOTOGRAPHY</li>
-                        <li class="portfolio__btn">ILLUSTRATION</li>
+                        <li class="portfolio__btn portfolio__btn--active" data-filter="*">ALL</li>
+                        <li class="portfolio__btn" data-filter="BRANDING">BRANDING</li>
+                        <li class="portfolio__btn" data-filter="PHOTOGRAPHY">PHOTOGRAPHY</li>
+                        <li class="portfolio__btn" data-filter="ILLUSTRATION">ILLUSTRATION</li>
                     </ul>
             </div>
         </div>
         <div class="portfolio__items">
-            <div class="portfolio__item-img">
+            <div class="portfolio__item-img " data-filter="BRANDING">
+                <div class="portfolio__item-curtain"></div>
                 <div class="portfolio__item-title">OCCA CUPIDATAT</div>
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
-            <div class="portfolio__item-img">
+            <div class="portfolio__item-img " data-filter="PHOTOGRAPHY">
+                <div class="portfolio__item-curtain"></div>
                 <div class="portfolio__item-title">OCCA CUPIDATAT</div>
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
-            <div class="portfolio__item-img">
+            <div class="portfolio__item-img " data-filter="BRANDING">
+                <div class="portfolio__item-curtain"></div>
                 <div class="portfolio__item-title">OCCA CUPIDATAT</div>
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
-            <div class="portfolio__item-img">
+            <div class="portfolio__item-img " data-filter="ILLUSTRATION">
+                <div class="portfolio__item-curtain"></div>
                 <div class="portfolio__item-title">OCCA CUPIDATAT</div>
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
-            <div class="portfolio__item-img">
+            <div class="portfolio__item-img " data-filter="PHOTOGRAPHY">
+                <div class="portfolio__item-curtain"></div>
                 <div class="portfolio__item-title">OCCA CUPIDATAT</div>
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
-            <div class="portfolio__item-img">
+            <div class="portfolio__item-img " data-filter="BRANDING">
+                <div class="portfolio__item-curtain"></div>
                 <div class="portfolio__item-title">OCCA CUPIDATAT</div>
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
-            <div class="portfolio__item-img">
+            <div class="portfolio__item-img " data-filter="PHOTOGRAPHY">
+                <div class="portfolio__item-curtain"></div>
                 <div class="portfolio__item-title">OCCA CUPIDATAT</div>
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
-            <div class="portfolio__item-img">
+            <div class="portfolio__item-img " data-filter="ILLUSTRATION">
+                <div class="portfolio__item-curtain"></div>
                 <div class="portfolio__item-title">OCCA CUPIDATAT</div>
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
-            <div class="portfolio__item-img">
+            <div class="portfolio__item-img " data-filter="BRANDING">
+                <div class="portfolio__item-curtain"></div>
                 <div class="portfolio__item-title">OCCA CUPIDATAT</div>
                 <div class="portfolio__item-destr">DESIGN</div>
             </div>
@@ -224,14 +270,14 @@
     </section>
 
     <section class="video">
-        <div class="video__quotes">
+        <div class="video__quotes scrollShow">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ex itaque commodi libero magni quisquam!
         </div>
-        <div class="video__quotes-author">
+        <div class="video__quotes-author scrollShow">
             Gilberd Hammont
         </div>
         
-        <div class="video__conteiner">
+        <div class="video__conteiner scrollShow">
             <video class="video__content">
                 <source src="./video/pexels-sarowar-hussain-5946371.mp4" type="video/mp4">
             </video>
@@ -270,17 +316,17 @@
         <div class="container">
             <div class="title">Our Team</div>
             <div class="team__items">
-                <div class="team__item">
+                <div class="team__item scrollShow">
                     <img class="team__item-img" src="./images/team_img_1.png" alt="">
                     <div class="team__item-name">BERNARD SPARKS</div>
                     <div class="team__item-position">CEO</div>
                 </div>
-                <div class="team__item">
+                <div class="team__item scrollShow">
                     <img class="team__item-img" src="./images/team_img_2.png" alt="">
                     <div class="team__item-name">MINERVA BENSON</div>
                     <div class="team__item-position">Co-Founder</div>
                 </div>
-                <div class="team__item">
+                <div class="team__item scrollShow">
                     <img class="team__item-img" src="./images/team_img_3.png" alt="">
                     <div class="team__item-name">JARED OLSON</div>
                     <div class="team__item-position">Sales</div>
@@ -295,14 +341,14 @@
                 Pricing Plans
             </div>
             <div class="pricing__items">
-                <div class="pricing__item">
+                <div class="pricing__item scrollShow">
                     <div class="pricing__item-name">
                         Basic
                     </div>
                     <div class="pricing__item-race">
                         29 <span>/ mo</span>
                     </div>
-                    <ul class="pricing__list">
+                    <ul class="pricing__list ">
                         <li class="pricing__list-item">
                             1 Logo Design
                         </li>
@@ -323,7 +369,7 @@
                         CHOOSE PLAN
                     </button>
                 </div>
-                <div class="pricing__item">
+                <div class="pricing__item scrollShow">
                     <div class="pricing__item-name">
                         Starter
                     </div>
@@ -351,7 +397,7 @@
                         CHOOSE PLAN
                     </button>
                 </div>
-                <div class="pricing__item">
+                <div class="pricing__item scrollShow">
                     <div class="pricing__item-name">
                         Professional
                     </div>
@@ -390,26 +436,26 @@
                     Get in Touch
                 </div>
             <form class="contact__form" action="">
-                <input class="contact__form-input" type="text" placeholder="YOUR NAME">
-                <input class="contact__form-input" type="email" placeholder="VALID EMAIL">
-                <textarea class="contact__form-input" placeholder="YOUR MESSAGE" rows="7"></textarea>
-                <button class="contact__btn">SEND MESSAGE</button>
+                <input class="contact__form-input scrollShow" type="text" placeholder="YOUR NAME">
+                <input class="contact__form-input scrollShow" type="email" placeholder="VALID EMAIL">
+                <textarea class="contact__form-input scrollShow" placeholder="YOUR MESSAGE" rows="7"></textarea>
+                <button class="contact__btn scrollShow">SEND MESSAGE</button>
             </form>
             </div>
         </div>
-        <div class="contact__map"></div>
+        <div class="contact__map scrollShow"></div>
     </section>
 
     <footer class="footer">
         <div class="container">
         <div class="footer__contant">
             
-                <div class="logo logo--line">
-                    <a class="logo-link" href="#">
+                <div class="logo logo--line scrollShow">
+                    <a class="logo-link " href="#">
                         <img class="logo__img" src="./icons/Logo.png" alt="">
                     </a>
                 </div>
-                <div class="footer__social">
+                <div class="footer__social scrollShow">
                         <a class="footer__social-link" href="#">FACEBOOK</a>
                         <a class="footer__social-link" href="#">TWITTER</a>
                         <a class="footer__social-link" href="#">GOOGLE+</a>
@@ -417,18 +463,18 @@
                         <a class="footer__social-link" href="#">DRIBBLE</a>
                         <a class="footer__social-link" href="#">INSTAGRAM</a>
                 </div>
-                <div class="footer__adress">Mese Selimovica 52, Banja Luka - BiH</div>
-                <a class="footer__phone" href="tel:0038765252222">(00387) 65 252 222</a>
-                <a class="footer__email" href="mailTo:info@mail.com">info@mail.com</a>
+                <div class="footer__adress scrollShow">Mese Selimovica 52, Banja Luka - BiH</div>
+                <a class="footer__phone scrollShow" href="tel:0038765252222">(00387) 65 252 222</a>
+                <a class="footer__email scrollShow" href="mailTo:info@mail.com">info@mail.com</a>
             
         </div>
     </div>
-        <div class="footer__copy">@2015 Oxygen Theme</div>
+        <div class="footer__copy scrollShow">@2015 Oxygen Theme</div>
     </footer>
 
-
-
-
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./lib/alertyfly/alertify.min.js"></script>
 
     <script src="./js/script.js"></script>
 </body>

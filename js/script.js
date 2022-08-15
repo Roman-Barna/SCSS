@@ -1,9 +1,15 @@
+$(() => {
+    $('.header-top').hide().slideDown(500)
 
 
 let menuLink = document.querySelectorAll('.menu__link')
 let decor = document.querySelector('.header__content-decor')
 let decorInterval 
-
+let modalWindow = document.querySelector('.modal-window')
+let windowOpasity = document.querySelector('.window__opasity')
+let pricingBtn = document.querySelectorAll('.pricing__btn')
+let modalBtnClose = document.querySelector('.modal__btn-close')
+let modalBtnSend = document.querySelector('.modal__btn-send')
 // navbar
 
 menuLink.forEach(element => {
@@ -35,6 +41,7 @@ window.addEventListener('scroll', () => {
     let windowScroll = window.scrollY
 
     if (windowScroll == 0) {
+        $('.header-top').hide().slideDown(500)
         decorAnimate()
     } else {
         clearInterval(decorInterval)
@@ -99,6 +106,8 @@ static.forEach(elem => {
 
 //
 
+
+
 let video = document.querySelector('.video__content')
 let playVideo = document.querySelector('.playVideo')
 let intervalEndVideo
@@ -126,9 +135,62 @@ playVideo.addEventListener('click', () => {
     
 })
 
+pricingBtn.forEach(element => {
+    element.addEventListener('click', () => {
+        modalWindow.style.display = 'block'
+        windowOpasity.style.display = 'block'
+    })
+})
+
+modalBtnClose.addEventListener('click', () => {
+    modalWindow.style.display = 'none'
+        windowOpasity.style.display = 'none'
+})
+
+modalBtnSend.addEventListener('click', (e) => {
+    alertify.success('Send your message!!!');
+})
+
+// scrollReveal
+
+ScrollReveal().reveal('.scrollShow', {
+    interval: 100
+});
+ScrollReveal({ distance: '160px' });
+ScrollReveal().reveal('.title', {
+    origin: 'left',
+    delay: 200
+});
 
 
 
 
 
 
+    $('.portfolio__btn').on('click', function () {
+        $('.portfolio__btn').removeClass('portfolio__btn--active')
+        $(this).addClass('portfolio__btn--active')
+
+
+
+        if ($(this).attr('data-filter') == '*') {
+            $('.portfolio__item-img').fadeIn(500)
+        } else if ($(this).attr('data-filter') == 'BRANDING') {
+            $('.portfolio__item-img').fadeIn(2)
+            $('.portfolio__item-img').filter(function () {
+                return $(this).attr('data-filter') != "BRANDING"
+            }).fadeOut(500)
+
+        } else if ($(this).attr('data-filter') == 'PHOTOGRAPHY') {
+            $('.portfolio__item-img').fadeIn(1)
+            $('.portfolio__item-img').filter(function () {
+                return $(this).attr('data-filter') != "PHOTOGRAPHY"
+            }).fadeOut(500)
+        } else if ($(this).attr('data-filter') == 'ILLUSTRATION') {
+            $('.portfolio__item-img').fadeIn(1)
+            $('.portfolio__item-img').filter(function () {
+                return $(this).attr('data-filter') != "ILLUSTRATION"
+            }).fadeOut(500)
+        }
+    })
+})
