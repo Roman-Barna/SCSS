@@ -490,6 +490,7 @@
   border: none;
   border-bottom: 2px solid #373A39;
   padding-bottom: 8px;
+  resize: none;
 }
 .contact__content .contact__form .contact__btn {
   width: 200px;
